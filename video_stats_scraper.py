@@ -61,25 +61,27 @@ def get_video_stats():
                 if line:
                     video_stats = clean_data(line)
                     if video_stats:
-                        # clean_data() will return 0 if not valid video stats
-                        new_row = {}
-                        new_row['timestamp'] = timestamp
+                        # error handling for bad data but 200 response code (views are reported as 0)
+                        if not video_stats['views'] == 0:
+                            # clean_data() will return 0 if not valid video stats
+                            new_row = {}
+                            new_row['timestamp'] = timestamp
 
-                        # iterate through keys of video_stats
-                        for key in sorted(video_stats.keys()):
-                            if key == 'id':
-                                new_row['video_id'] = video_stats[key]
-                            elif key == 'date':
-                                new_row['upload_date'] = convert_timezone(video_stats[key])
-                            elif key == 'thumbnail':
-                                continue # skip thumbnail info, its not important to keep
-                            elif key == 'title':
-                                # handles titles with characters that raise UnicodeEncodeError when printing
-                                new_row[key] = video_stats[key].encode('utf-8')
-                            else:
-                                new_row[key] = video_stats[key]
-                        
-                        new_rows.append(new_row)
+                            # iterate through keys of video_stats
+                            for key in sorted(video_stats.keys()):
+                                if key == 'id':
+                                    new_row['video_id'] = video_stats[key]
+                                elif key == 'date':
+                                    new_row['upload_date'] = convert_timezone(video_stats[key])
+                                elif key == 'thumbnail':
+                                    continue # skip thumbnail info, its not important to keep
+                                elif key == 'title':
+                                    # handles titles with characters that raise UnicodeEncodeError when printing
+                                    new_row[key] = video_stats[key].encode('utf-8')
+                                else:
+                                    new_row[key] = video_stats[key]
+                            
+                            new_rows.append(new_row)
 
             with open(LOGS_PATH, 'a') as f:
                 print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: received video stats", file=f)
