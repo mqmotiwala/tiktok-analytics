@@ -28,7 +28,8 @@ def adjust_title(fig, ax):
 
     fig.canvas.draw()
 
-def build_individual_plots():       
+def build_individual_plots():
+    # sort by upload_date to anchor video_num 
     for video_num, video_id in enumerate(video_stats.sort_values('upload_date')['video_id'].unique()):
         specific_video_stats = video_stats[video_stats['video_id'] == video_id]
         time_data = specific_video_stats['timestamp']

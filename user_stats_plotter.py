@@ -5,29 +5,37 @@ import matplotlib.dates as mdates
 import platform
 
 PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
-USER_STATS_PLOT_PATH = f'{PATH_PREFIX}/plots/user_plots/user_stats_plot.png'
+USER_STATS_PLOT_PATH = f'{PATH_PREFIX}plots/user_plots/'
+USER_STATS_FILE_PATH = f'{PATH_PREFIX}stats/user_stats.txt'
 
-def build_plots(stats):
-    fig, (p1a, p2a) = plt.subplots(2, 1)
+def build_user_stats_plots(user_stats):
+    time_data = user_stats['timestamp']
+    num_vids_data = user_stats['num_vids']
+    for stat_name in user_stats[['num_likes', 'num_followers', 'num_following']]:
+        specific_user_stat = user_stats[stat_name]
 
-    p1a.plot(stats['date'], stats['num_followers'], color='red', label='Followers')
-    p1a.set_ylabel('Number of Followers')
+        fig, ax1 = plt.subplots()
+        ax1.plot(time_data, specific_user_stat, label=stat_name, color='red')
+        ax1.set_xlabel('Time')
+        ax1.set_ylabel(stat_name, color='red')
+        ax1.tick_params('y', colors='red')
 
-    p1b = p1a.twinx()
-    p1b.step(stats['date'], stats['num_vids'], where='post', color='green', label='Video Count')
-    p1b.set_ylabel('Number of Videos')
+        ax2 = ax1.twinx()
+        ax2.step(time_data, num_vids_data, label='num_vids', color='blue')
+        ax2.set_ylabel('num_vids', color='blue')
+        ax2.tick_params('y', colors='blue')
 
-    p2a.plot(stats['date'], stats['num_likes'], color='blue', label='Likes')
-    p2a.set_ylabel('Number of Likes')
+        ax1.xaxis.set_major_locator(mdates.AutoDateLocator())
+        ax1.xaxis.set_major_formatter(mdates.ConciseDateFormatter(ax1.xaxis.get_major_locator()))
+        plt.gcf().autofmt_xdate(rotation=45)
 
-    p2b = p2a.twinx()
-    p2b.step(stats['date'], stats['num_vids'], where='post', color='green', label='Video Count')
-    p2b.set_ylabel('Number of Videos')
+        plt.title(f"num_vids and {stat_name} over time")
+        plt.legend()
 
-    locator = mdates.AutoDateLocator()
-    p1a.xaxis.set_major_locator(locator)
-    p2a.xaxis.set_major_locator(locator)
+        PLOT_PATH=f"{USER_STATS_PLOT_PATH}{stat_name}.png"
+        plt.savefig(PLOT_PATH)
 
-    plt.gcf().autofmt_xdate(rotation=45)
-    fig.set_figwidth(8)
-    plt.savefig(USER_STATS_PLOT_PATH)
+user_stats = pd.read_csv(USER_STATS_FILE_PATH, delimiter='\t')
+user_stats['timestamp'] = pd.to_datetime(user_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
+
+build_user_stats_plots(user_stats)
