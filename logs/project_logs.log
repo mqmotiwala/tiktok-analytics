@@ -1,0 +1,521 @@
+07-14-2023 16:33: starting
+2023-07-14 16:33: received user data
+2023-07-14 16:33: updated user_stats
+2023-07-14 16:33: received video stats
+2023-07-14 16:33: updated video_stats
+2023-07-14 16:48: received video stats
+2023-07-14 16:48: updated video_stats
+2023-07-14 17:03: received video stats
+2023-07-14 17:03: updated video_stats
+2023-07-14 17:18: received video stats
+2023-07-14 17:18: updated video_stats
+2023-07-14 17:33: received user data
+2023-07-14 17:33: updated user_stats
+2023-07-14 17:33: received video stats
+2023-07-14 17:33: updated video_stats
+2023-07-14 17:48: received video stats
+2023-07-14 17:48: updated video_stats
+2023-07-14 18:03: received video stats
+2023-07-14 18:03: updated video_stats
+2023-07-14 18:18: received video stats
+2023-07-14 18:18: updated video_stats
+2023-07-14 18:33: received user data
+2023-07-14 18:33: updated user_stats
+2023-07-14 18:33: received video stats
+2023-07-14 18:33: updated video_stats
+2023-07-14 18:48: received video stats
+2023-07-14 18:48: updated video_stats
+2023-07-14 19:03: received video stats
+2023-07-14 19:03: updated video_stats
+2023-07-14 19:18: received video stats
+2023-07-14 19:18: updated video_stats
+2023-07-14 19:33: received user data
+2023-07-14 19:33: updated user_stats
+2023-07-14 19:33: received video stats
+2023-07-14 19:33: updated video_stats
+2023-07-14 19:48: received video stats
+2023-07-14 19:48: updated video_stats
+2023-07-14 20:03: received video stats
+2023-07-14 20:03: updated video_stats
+2023-07-14 20:18: received video stats
+2023-07-14 20:18: updated video_stats
+2023-07-14 20:33: received user data
+2023-07-14 20:33: updated user_stats
+2023-07-14 20:33: received video stats
+2023-07-14 20:33: updated video_stats
+2023-07-14 20:48: received video stats
+2023-07-14 21:03: received video stats
+2023-07-14 21:03: updated video_stats
+2023-07-14 21:18: received video stats
+2023-07-14 21:18: updated video_stats
+2023-07-14 21:33: received user data
+2023-07-14 21:33: updated user_stats
+2023-07-14 21:33: received video stats
+2023-07-14 21:33: updated video_stats
+2023-07-14 21:48: received video stats
+2023-07-14 21:48: updated video_stats
+2023-07-14 22:03: received video stats
+2023-07-14 22:03: updated video_stats
+2023-07-14 22:18: received video stats
+2023-07-14 22:18: updated video_stats
+2023-07-14 22:33: received user data
+2023-07-14 22:33: updated user_stats
+2023-07-14 22:34: received video stats
+2023-07-14 22:34: updated video_stats
+2023-07-14 22:49: received video stats
+2023-07-14 22:49: updated video_stats
+2023-07-14 23:04: received video stats
+2023-07-14 23:04: updated video_stats
+2023-07-14 23:19: received video stats
+2023-07-14 23:19: updated video_stats
+2023-07-14 23:33: received user data
+2023-07-14 23:33: updated user_stats
+2023-07-14 23:34: received video stats
+2023-07-14 23:34: updated video_stats
+2023-07-14 23:49: received video stats
+2023-07-14 23:49: updated video_stats
+2023-07-15 00:04: received video stats
+2023-07-15 00:04: updated video_stats
+2023-07-15 00:19: received video stats
+2023-07-15 00:19: updated video_stats
+2023-07-15 00:33: received user data
+2023-07-15 00:33: updated user_stats
+2023-07-15 00:34: received video stats
+2023-07-15 00:34: updated video_stats
+2023-07-15 00:49: received video stats
+2023-07-15 00:49: updated video_stats
+2023-07-15 01:04: received video stats
+2023-07-15 01:04: updated video_stats
+2023-07-15 01:19: received video stats
+2023-07-15 01:19: updated video_stats
+2023-07-15 01:33: received user data
+2023-07-15 01:33: updated user_stats
+2023-07-15 01:34: received video stats
+2023-07-15 01:34: updated video_stats
+2023-07-15 01:49: received video stats
+2023-07-15 01:49: updated video_stats
+2023-07-15 02:04: received video stats
+2023-07-15 02:04: updated video_stats
+2023-07-15 02:19: received video stats
+2023-07-15 02:19: updated video_stats
+2023-07-15 02:33: received user data
+2023-07-15 02:33: updated user_stats
+2023-07-15 02:34: received video stats
+2023-07-15 02:34: updated video_stats
+2023-07-15 02:49: received video stats
+2023-07-15 02:49: updated video_stats
+2023-07-15 03:04: received video stats
+2023-07-15 03:04: updated video_stats
+2023-07-15 03:19: attempt 1 - bad response getting video data (502)
+2023-07-15 03:20: received video stats
+2023-07-15 03:20: updated video_stats
+2023-07-15 03:33: received user data
+2023-07-15 03:33: updated user_stats
+2023-07-15 03:35: received video stats
+2023-07-15 03:35: updated video_stats
+2023-07-15 03:50: received video stats
+2023-07-15 03:50: updated video_stats
+2023-07-15 04:05: received video stats
+2023-07-15 04:05: updated video_stats
+2023-07-15 04:20: received video stats
+2023-07-15 04:20: updated video_stats
+2023-07-15 04:33: received user data
+2023-07-15 04:33: updated user_stats
+2023-07-15 04:35: received video stats
+2023-07-15 04:35: updated video_stats
+2023-07-15 04:50: received video stats
+2023-07-15 04:50: updated video_stats
+2023-07-15 05:05: received video stats
+2023-07-15 05:05: updated video_stats
+2023-07-15 05:20: received video stats
+2023-07-15 05:20: updated video_stats
+2023-07-15 05:33: received user data
+2023-07-15 05:33: updated user_stats
+2023-07-15 05:35: received video stats
+2023-07-15 05:35: updated video_stats
+2023-07-15 05:50: received video stats
+2023-07-15 05:50: updated video_stats
+2023-07-15 06:05: received video stats
+2023-07-15 06:05: updated video_stats
+2023-07-15 06:20: received video stats
+2023-07-15 06:20: updated video_stats
+2023-07-15 06:34: received user data
+2023-07-15 06:34: updated user_stats
+2023-07-15 06:35: received video stats
+2023-07-15 06:35: updated video_stats
+2023-07-15 06:53: received video stats
+2023-07-15 06:53: updated video_stats
+2023-07-15 07:08: received video stats
+2023-07-15 07:08: updated video_stats
+2023-07-15 07:23: received video stats
+2023-07-15 07:23: updated video_stats
+2023-07-15 07:34: received user data
+2023-07-15 07:34: updated user_stats
+2023-07-15 07:38: received video stats
+2023-07-15 07:38: updated video_stats
+2023-07-15 07:53: received video stats
+2023-07-15 07:53: updated video_stats
+2023-07-15 08:08: received video stats
+2023-07-15 08:08: updated video_stats
+2023-07-15 08:23: received video stats
+2023-07-15 08:23: updated video_stats
+2023-07-15 08:34: received user data
+2023-07-15 08:34: updated user_stats
+2023-07-15 08:38: received video stats
+2023-07-15 08:38: updated video_stats
+2023-07-15 08:53: received video stats
+2023-07-15 08:53: updated video_stats
+2023-07-15 09:08: received video stats
+2023-07-15 09:08: updated video_stats
+2023-07-15 09:23: received video stats
+2023-07-15 09:23: updated video_stats
+2023-07-15 09:34: received user data
+2023-07-15 09:34: updated user_stats
+2023-07-15 09:38: received video stats
+2023-07-15 09:38: updated video_stats
+2023-07-15 09:53: received video stats
+2023-07-15 09:53: updated video_stats
+2023-07-15 10:08: received video stats
+2023-07-15 10:08: updated video_stats
+2023-07-15 10:23: received video stats
+2023-07-15 10:23: updated video_stats
+2023-07-15 10:34: received user data
+2023-07-15 10:34: updated user_stats
+2023-07-15 10:38: received video stats
+2023-07-15 10:38: updated video_stats
+2023-07-15 10:53: received video stats
+2023-07-15 10:53: updated video_stats
+2023-07-15 11:08: received video stats
+2023-07-15 11:08: updated video_stats
+2023-07-15 11:23: received video stats
+2023-07-15 11:23: updated video_stats
+2023-07-15 11:34: received user data
+2023-07-15 11:34: updated user_stats
+2023-07-15 11:38: received video stats
+2023-07-15 11:38: updated video_stats
+2023-07-15 11:53: received video stats
+2023-07-15 11:53: updated video_stats
+2023-07-15 12:08: received video stats
+2023-07-15 12:09: updated video_stats
+2023-07-15 12:24: received video stats
+2023-07-15 12:24: updated video_stats
+2023-07-15 12:34: received user data
+2023-07-15 12:34: updated user_stats
+2023-07-15 12:39: received video stats
+2023-07-15 12:39: updated video_stats
+2023-07-15 12:54: received video stats
+2023-07-15 12:54: updated video_stats
+2023-07-15 13:09: received video stats
+2023-07-15 13:09: updated video_stats
+2023-07-15 13:24: received video stats
+2023-07-15 13:24: updated video_stats
+2023-07-15 13:34: received user data
+2023-07-15 13:34: updated user_stats
+2023-07-15 13:39: received video stats
+2023-07-15 13:39: updated video_stats
+2023-07-15 13:54: received video stats
+2023-07-15 13:54: updated video_stats
+2023-07-15 14:09: received video stats
+2023-07-15 14:09: updated video_stats
+2023-07-15 14:24: received video stats
+2023-07-15 14:24: updated video_stats
+2023-07-15 14:34: received user data
+2023-07-15 14:34: updated user_stats
+2023-07-15 14:39: received video stats
+2023-07-15 14:39: updated video_stats
+2023-07-15 14:54: received video stats
+2023-07-15 14:54: updated video_stats
+2023-07-15 15:09: received video stats
+2023-07-15 15:09: updated video_stats
+2023-07-15 15:24: received video stats
+2023-07-15 15:24: updated video_stats
+2023-07-15 15:34: received user data
+2023-07-15 15:34: updated user_stats
+2023-07-15 15:39: received video stats
+2023-07-15 15:39: updated video_stats
+2023-07-15 15:54: received video stats
+2023-07-15 15:54: updated video_stats
+2023-07-15 16:09: received video stats
+2023-07-15 16:09: updated video_stats
+2023-07-15 16:24: received video stats
+2023-07-15 16:24: updated video_stats
+2023-07-15 16:34: received user data
+2023-07-15 16:34: updated user_stats
+2023-07-15 16:39: received video stats
+2023-07-15 16:39: updated video_stats
+2023-07-15 16:54: received video stats
+2023-07-15 16:54: updated video_stats
+2023-07-15 17:09: received video stats
+2023-07-15 17:09: updated video_stats
+2023-07-15 17:24: received video stats
+2023-07-15 17:24: updated video_stats
+2023-07-15 17:34: received user data
+2023-07-15 17:34: updated user_stats
+2023-07-15 17:39: received video stats
+2023-07-15 17:39: updated video_stats
+2023-07-15 17:54: received video stats
+2023-07-15 17:54: updated video_stats
+2023-07-15 18:09: received video stats
+2023-07-15 18:09: updated video_stats
+2023-07-15 18:24: received video stats
+2023-07-15 18:24: updated video_stats
+2023-07-15 18:34: received user data
+2023-07-15 18:34: updated user_stats
+2023-07-15 18:39: received video stats
+2023-07-15 18:39: updated video_stats
+2023-07-15 18:54: received video stats
+2023-07-15 18:54: updated video_stats
+2023-07-15 19:09: received video stats
+2023-07-15 19:09: updated video_stats
+2023-07-15 19:24: received video stats
+2023-07-15 19:24: updated video_stats
+2023-07-15 19:34: received user data
+2023-07-15 19:34: updated user_stats
+2023-07-15 19:39: received video stats
+2023-07-15 19:39: updated video_stats
+2023-07-15 19:54: received video stats
+2023-07-15 19:54: updated video_stats
+2023-07-15 20:09: received video stats
+2023-07-15 20:09: updated video_stats
+2023-07-15 20:24: received video stats
+2023-07-15 20:24: updated video_stats
+2023-07-15 20:34: received user data
+2023-07-15 20:34: updated user_stats
+2023-07-15 20:39: received video stats
+2023-07-15 20:39: updated video_stats
+2023-07-15 20:54: received video stats
+2023-07-15 20:54: updated video_stats
+2023-07-15 21:09: received video stats
+2023-07-15 21:09: updated video_stats
+2023-07-15 21:24: received video stats
+2023-07-15 21:24: updated video_stats
+2023-07-15 21:34: received user data
+2023-07-15 21:34: updated user_stats
+2023-07-15 21:39: received video stats
+2023-07-15 21:39: updated video_stats
+2023-07-15 21:54: received video stats
+2023-07-15 21:54: updated video_stats
+2023-07-15 22:10: received video stats
+2023-07-15 22:10: updated video_stats
+2023-07-15 22:25: received video stats
+2023-07-15 22:25: updated video_stats
+2023-07-15 22:34: received user data
+2023-07-15 22:34: updated user_stats
+2023-07-15 22:40: received video stats
+2023-07-15 22:40: updated video_stats
+2023-07-15 22:55: received video stats
+2023-07-15 22:55: updated video_stats
+2023-07-15 23:10: received video stats
+2023-07-15 23:10: updated video_stats
+2023-07-15 23:25: received video stats
+2023-07-15 23:25: updated video_stats
+2023-07-15 23:34: received user data
+2023-07-15 23:34: updated user_stats
+2023-07-15 23:40: received video stats
+2023-07-15 23:40: updated video_stats
+2023-07-15 23:55: received video stats
+2023-07-15 23:55: updated video_stats
+2023-07-16 00:10: received video stats
+2023-07-16 00:10: updated video_stats
+2023-07-16 00:25: received video stats
+2023-07-16 00:25: updated video_stats
+2023-07-16 00:34: received user data
+2023-07-16 00:34: updated user_stats
+2023-07-16 00:40: received video stats
+2023-07-16 00:40: updated video_stats
+2023-07-16 00:55: received video stats
+2023-07-16 00:55: updated video_stats
+2023-07-16 01:10: received video stats
+2023-07-16 01:10: updated video_stats
+2023-07-16 01:25: received video stats
+2023-07-16 01:25: updated video_stats
+2023-07-16 01:35: received user data
+2023-07-16 01:35: updated user_stats
+2023-07-16 01:40: received video stats
+2023-07-16 01:40: updated video_stats
+2023-07-16 01:55: received video stats
+2023-07-16 01:55: updated video_stats
+2023-07-16 02:10: received video stats
+2023-07-16 02:10: updated video_stats
+2023-07-16 02:25: received video stats
+2023-07-16 02:25: updated video_stats
+2023-07-16 02:35: received user data
+2023-07-16 02:35: updated user_stats
+2023-07-16 02:40: received video stats
+2023-07-16 02:40: updated video_stats
+2023-07-16 02:55: received video stats
+2023-07-16 02:55: updated video_stats
+2023-07-16 03:10: received video stats
+2023-07-16 03:10: updated video_stats
+2023-07-16 03:25: received video stats
+2023-07-16 03:25: updated video_stats
+2023-07-16 03:35: received user data
+2023-07-16 03:35: updated user_stats
+2023-07-16 03:40: received video stats
+2023-07-16 03:40: updated video_stats
+2023-07-16 03:55: received video stats
+2023-07-16 03:55: updated video_stats
+2023-07-16 04:10: received video stats
+2023-07-16 04:10: updated video_stats
+2023-07-16 04:25: received video stats
+2023-07-16 04:25: updated video_stats
+2023-07-16 04:35: received user data
+2023-07-16 04:35: updated user_stats
+2023-07-16 04:40: received video stats
+2023-07-16 04:40: updated video_stats
+2023-07-16 04:55: received video stats
+2023-07-16 04:55: updated video_stats
+2023-07-16 05:10: received video stats
+2023-07-16 05:10: updated video_stats
+2023-07-16 05:25: received video stats
+2023-07-16 05:25: updated video_stats
+2023-07-16 05:35: received user data
+2023-07-16 05:35: updated user_stats
+2023-07-16 05:40: received video stats
+2023-07-16 05:40: updated video_stats
+2023-07-16 05:55: received video stats
+2023-07-16 05:55: updated video_stats
+2023-07-16 06:10: received video stats
+2023-07-16 06:10: updated video_stats
+2023-07-16 06:25: received video stats
+2023-07-16 06:25: updated video_stats
+2023-07-16 06:35: received user data
+2023-07-16 06:35: updated user_stats
+2023-07-16 06:40: received video stats
+2023-07-16 06:40: updated video_stats
+2023-07-16 06:55: received video stats
+2023-07-16 06:55: updated video_stats
+2023-07-16 07:10: received video stats
+2023-07-16 07:10: updated video_stats
+2023-07-16 07:25: received video stats
+2023-07-16 07:25: updated video_stats
+2023-07-16 07:35: received user data
+2023-07-16 07:35: updated user_stats
+2023-07-16 07:40: received video stats
+2023-07-16 07:40: updated video_stats
+2023-07-16 07:55: received video stats
+2023-07-16 07:55: updated video_stats
+2023-07-16 08:11: received video stats
+2023-07-16 08:11: updated video_stats
+2023-07-16 08:26: received video stats
+2023-07-16 08:26: updated video_stats
+2023-07-16 08:35: received user data
+2023-07-16 08:35: updated user_stats
+2023-07-16 08:41: received video stats
+2023-07-16 08:41: updated video_stats
+2023-07-16 08:56: received video stats
+2023-07-16 08:56: updated video_stats
+2023-07-16 09:11: received video stats
+2023-07-16 09:11: updated video_stats
+2023-07-16 09:26: received video stats
+2023-07-16 09:26: updated video_stats
+2023-07-16 09:35: received user data
+2023-07-16 09:35: updated user_stats
+2023-07-16 09:41: received video stats
+2023-07-16 09:41: updated video_stats
+2023-07-16 09:56: received video stats
+2023-07-16 09:56: updated video_stats
+2023-07-16 10:11: received video stats
+2023-07-16 10:11: updated video_stats
+2023-07-16 10:26: received video stats
+2023-07-16 10:26: updated video_stats
+2023-07-16 10:35: received user data
+2023-07-16 10:35: updated user_stats
+2023-07-16 10:41: received video stats
+2023-07-16 10:41: updated video_stats
+2023-07-16 10:56: received video stats
+2023-07-16 10:56: updated video_stats
+2023-07-16 11:11: received video stats
+2023-07-16 11:11: updated video_stats
+2023-07-16 11:26: received video stats
+2023-07-16 11:26: updated video_stats
+2023-07-16 11:35: received user data
+2023-07-16 11:35: updated user_stats
+2023-07-16 11:41: received video stats
+2023-07-16 11:41: updated video_stats
+2023-07-16 11:56: received video stats
+2023-07-16 11:56: updated video_stats
+2023-07-16 12:11: received video stats
+2023-07-16 12:11: updated video_stats
+2023-07-16 12:26: received video stats
+2023-07-16 12:26: updated video_stats
+2023-07-16 12:35: received user data
+2023-07-16 12:35: updated user_stats
+2023-07-16 12:41: received video stats
+2023-07-16 12:41: updated video_stats
+2023-07-16 12:56: received video stats
+2023-07-16 12:56: updated video_stats
+2023-07-16 13:11: received video stats
+2023-07-16 13:11: updated video_stats
+2023-07-16 13:26: received video stats
+2023-07-16 13:26: updated video_stats
+2023-07-16 13:35: received user data
+2023-07-16 13:35: updated user_stats
+2023-07-16 13:41: received video stats
+2023-07-16 13:41: updated video_stats
+2023-07-16 13:56: received video stats
+2023-07-16 13:56: updated video_stats
+2023-07-16 14:11: received video stats
+2023-07-16 14:11: updated video_stats
+2023-07-16 14:26: received video stats
+2023-07-16 14:26: updated video_stats
+2023-07-16 14:35: received user data
+2023-07-16 14:35: updated user_stats
+2023-07-16 14:41: received video stats
+2023-07-16 14:41: updated video_stats
+2023-07-16 14:56: received video stats
+2023-07-16 14:56: updated video_stats
+2023-07-16 15:11: received video stats
+2023-07-16 15:11: updated video_stats
+2023-07-16 15:26: received video stats
+2023-07-16 15:26: updated video_stats
+2023-07-16 15:35: received user data
+2023-07-16 15:35: updated user_stats
+2023-07-16 15:41: received video stats
+2023-07-16 15:41: updated video_stats
+2023-07-16 15:56: received video stats
+2023-07-16 15:56: updated video_stats
+2023-07-16 16:11: received video stats
+2023-07-16 16:11: updated video_stats
+2023-07-16 16:26: received video stats
+2023-07-16 16:26: updated video_stats
+2023-07-16 16:35: received user data
+2023-07-16 16:35: updated user_stats
+2023-07-16 16:41: received video stats
+2023-07-16 16:41: updated video_stats
+2023-07-16 16:56: received video stats
+2023-07-16 16:56: updated video_stats
+2023-07-16 17:11: received video stats
+2023-07-16 17:11: updated video_stats
+2023-07-16 17:26: received video stats
+2023-07-16 17:26: updated video_stats
+2023-07-16 17:35: received user data
+2023-07-16 17:35: updated user_stats
+2023-07-16 17:41: received video stats
+2023-07-16 17:41: updated video_stats
+2023-07-16 17:57: received video stats
+2023-07-16 17:57: updated video_stats
+2023-07-16 18:12: received video stats
+2023-07-16 18:12: updated video_stats
+2023-07-16 18:27: received video stats
+2023-07-16 18:27: updated video_stats
+2023-07-16 18:35: received user data
+2023-07-16 18:35: updated user_stats
+2023-07-16 18:42: received video stats
+2023-07-16 18:42: updated video_stats
+2023-07-16 18:57: received video stats
+2023-07-16 18:57: updated video_stats
+2023-07-16 19:12: received video stats
+2023-07-16 19:12: updated video_stats
+2023-07-16 19:27: received video stats
+2023-07-16 19:27: updated video_stats
+2023-07-16 19:35: received user data
+2023-07-16 19:35: updated user_stats
+2023-07-16 19:42: received video stats
+2023-07-16 19:42: updated video_stats
+2023-07-16 19:57: received video stats
+2023-07-16 19:57: updated video_stats
+2023-07-16 20:12: received video stats
+2023-07-16 20:12: updated video_stats
+2023-07-16 20:27: received video stats
+2023-07-16 20:27: updated video_stats
