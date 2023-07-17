@@ -5,10 +5,13 @@ import matplotlib.dates as mdates
 import platform
 
 PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
+LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
 USER_STATS_PLOT_PATH = f'{PATH_PREFIX}plots/user_plots/'
 USER_STATS_FILE_PATH = f'{PATH_PREFIX}stats/user_stats.txt'
 
 def build_user_stats_plots(user_stats):
+    user_stats['timestamp'] = pd.to_datetime(user_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
+
     time_data = user_stats['timestamp']
     num_vids_data = user_stats['num_vids']
     for stat_name in user_stats[['num_likes', 'num_followers', 'num_following']]:
@@ -34,8 +37,7 @@ def build_user_stats_plots(user_stats):
 
         PLOT_PATH=f"{USER_STATS_PLOT_PATH}{stat_name}.png"
         plt.savefig(PLOT_PATH)
+        plt.close(fig)
 
-user_stats = pd.read_csv(USER_STATS_FILE_PATH, delimiter='\t')
-user_stats['timestamp'] = pd.to_datetime(user_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
-
-build_user_stats_plots(user_stats)
+        with open(LOGS_PATH, 'a') as f:
+                print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated {stat_name}.png plot", file=f)

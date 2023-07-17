@@ -28,7 +28,9 @@ def adjust_title(fig, ax):
 
     fig.canvas.draw()
 
-def build_individual_plots():
+def build_video_stats_plots(video_stats):
+    video_stats['timestamp'] = pd.to_datetime(video_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
+
     # sort by upload_date to anchor video_num 
     for video_num, video_id in enumerate(video_stats.sort_values('upload_date')['video_id'].unique()):
         specific_video_stats = video_stats[video_stats['video_id'] == video_id]
@@ -54,8 +56,7 @@ def build_individual_plots():
 
         PLOT_PATH=f"{VIDEO_PLOTS_PATH}Video #{video_num+1}"
         plt.savefig(PLOT_PATH)
+        plt.close(fig)
 
-video_stats = pd.read_csv(VIDEO_STATS_FILE_PATH, delimiter='\t')
-video_stats['timestamp'] = pd.to_datetime(video_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
-
-build_individual_plots()
+        with open(LOGS_PATH, 'a') as f:
+                print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated video #{video_num+1}.png plot", file=f)

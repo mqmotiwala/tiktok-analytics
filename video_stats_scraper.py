@@ -42,7 +42,7 @@ def convert_timezone(input_str):
 
     return pst_datetime
 
-def get_video_stats():
+def get_new_video_stats():
     url = f"https://tokscraper.com/api/tiktok/videos/6864399732275528710?username={USERNAME}"
     headers = {'Accept': 'text/event-stream'}
 
@@ -94,7 +94,7 @@ def get_video_stats():
 
     return(0) # return 0 if unsuccessful in getting data
 
-def update_user_stats(new_rows, video_stats):
+def update_video_stats(new_rows, video_stats):
     video_stats = pd.concat([video_stats,pd.DataFrame(new_rows)], ignore_index=True)
     video_stats.to_csv(VIDEO_STATS_FILE_PATH, index=False, sep='\t')
     

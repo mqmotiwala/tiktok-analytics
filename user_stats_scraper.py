@@ -14,12 +14,12 @@ USER_STATS_COLS = ['timestamp', 'num_vids', 'num_likes', 'num_followers', 'num_f
 def load_user_stats():
     if not os.path.exists(USER_STATS_FILE_PATH):
         # create empty df for stats if not already exist
-        stats = pd.DataFrame(columns=USER_STATS_COLS)
+        user_stats = pd.DataFrame(columns=USER_STATS_COLS)
     else:
         # else, load from file
-        stats = pd.read_csv(USER_STATS_FILE_PATH, delimiter='\t')
+        user_stats = pd.read_csv(USER_STATS_FILE_PATH, delimiter='\t')
     
-    return stats
+    return user_stats
 
 def get_new_user_stats():
     url = "https://tokscraper.com/api/basicdata"
@@ -52,9 +52,9 @@ def get_new_user_stats():
     
     return(0) # return 0 if unsuccessful at getting data
 
-def update_user_stats(new_row, stats):
-    stats = pd.concat([stats, pd.DataFrame(new_row, index=[0])])
-    stats.to_csv(USER_STATS_FILE_PATH, sep='\t', index=False)
+def update_user_stats(new_row, user_stats):
+    user_stats = pd.concat([user_stats, pd.DataFrame(new_row, index=[0])])
+    user_stats.to_csv(USER_STATS_FILE_PATH, sep='\t', index=False)
 
     with open(LOGS_PATH, 'a') as f:
         print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated user_stats", file=f)
