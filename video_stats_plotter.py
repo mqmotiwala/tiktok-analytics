@@ -5,6 +5,7 @@ from datetime import datetime as dt
 import platform
 import re
 import textwrap
+import pytz
 
 PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
 LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
@@ -30,6 +31,7 @@ def adjust_title(fig, ax):
 
 def build_video_stats_plots(video_stats):
     video_stats['timestamp'] = pd.to_datetime(video_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
+    pst = pytz.timezone('America/Los_Angeles')
 
     # sort by upload_date to anchor video_num 
     for video_num, video_id in enumerate(video_stats.sort_values('upload_date')['video_id'].unique()):
@@ -43,7 +45,7 @@ def build_video_stats_plots(video_stats):
         title_text = f"vid #{video_num+1} (upl. {upload_date}) {video_title}"
 
         fig, ax = plt.subplots()
-        ax.xaxis.set_major_locator(mdates.AutoDateLocator())
+        ax.xaxis.set_major_locator(mdates.AutoDateLocator(tz=pst))
         ax.xaxis.set_major_formatter(mdates.ConciseDateFormatter(ax.xaxis.get_major_locator()))
 
         plt.plot(time_data, views_data, label='views')
@@ -60,3 +62,6 @@ def build_video_stats_plots(video_stats):
 
     with open(LOGS_PATH, 'a') as f:
             print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated video plots", file=f)
+
+video_stats = pd.read_csv(VIDEO_STATS_FILE_PATH, sep='\t')
+build_video_stats_plots(video_stats)

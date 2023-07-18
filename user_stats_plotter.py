@@ -3,6 +3,7 @@ from datetime import datetime as dt
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import platform
+import pytz
 
 PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
 LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
@@ -11,6 +12,7 @@ USER_STATS_FILE_PATH = f'{PATH_PREFIX}stats/user_stats.txt'
 
 def build_user_stats_plots(user_stats):
     user_stats['timestamp'] = pd.to_datetime(user_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
+    pst = pytz.timezone('America/Los_Angeles')
 
     time_data = user_stats['timestamp']
     num_vids_data = user_stats['num_vids']
@@ -28,7 +30,7 @@ def build_user_stats_plots(user_stats):
         ax2.set_ylabel('num_vids', color='blue')
         ax2.tick_params('y', colors='blue')
 
-        ax1.xaxis.set_major_locator(mdates.AutoDateLocator())
+        ax1.xaxis.set_major_locator(mdates.AutoDateLocator(tz=pst))
         ax1.xaxis.set_major_formatter(mdates.ConciseDateFormatter(ax1.xaxis.get_major_locator()))
         plt.gcf().autofmt_xdate(rotation=45)
 
