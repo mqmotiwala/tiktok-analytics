@@ -84,7 +84,7 @@ def get_new_video_stats():
                             new_rows.append(new_row)
 
             with open(LOGS_PATH, 'a') as f:
-                print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: received video stats", file=f)
+                print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: received video data", file=f)
             return new_rows
         else:
             # try again in a minute

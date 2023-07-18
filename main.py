@@ -45,8 +45,10 @@ vss_do_all()
 vsp_do_all()
 
 # schedule future runs
-schedule.every(15).minutes.do(vss_do_all).do(vsp_do_all).tag('video_stats')
-schedule.every(60).minutes.do(uss_do_all).do(usp_do_all).tag('user_stats')
+schedule.every(15).minutes.do(vss_do_all)
+schedule.every(15).minutes.do(vsp_do_all)
+schedule.every(60).minutes.do(uss_do_all)
+schedule.every(60).minutes.do(usp_do_all)
 while True:
     schedule.run_pending()
     time.sleep(1)

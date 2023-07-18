@@ -39,5 +39,5 @@ def build_user_stats_plots(user_stats):
         plt.savefig(PLOT_PATH)
         plt.close(fig)
 
-        with open(LOGS_PATH, 'a') as f:
-                print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated {stat_name}.png plot", file=f)
+    with open(LOGS_PATH, 'a') as f:
+            print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated user plots", file=f)

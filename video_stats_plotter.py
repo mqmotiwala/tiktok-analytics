@@ -58,5 +58,5 @@ def build_video_stats_plots(video_stats):
         plt.savefig(PLOT_PATH)
         plt.close(fig)
 
-        with open(LOGS_PATH, 'a') as f:
-                print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated video #{video_num+1}.png plot", file=f)
+    with open(LOGS_PATH, 'a') as f:
+            print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated video plots", file=f)
