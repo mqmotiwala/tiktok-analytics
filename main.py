@@ -12,31 +12,38 @@ import platform
 PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
 LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
 
+def df_in_memory(df_name):
+    return True if (df_name in globals() or df_name in locals()) else False
+
 def uss_do_all():
-    if ('user_stats' not in globals() and 'user_stats' not in locals()) or not isinstance(user_stats, pd.DataFrame):
+    if not df_in_memory('user_stats'):
         user_stats = uss.load_user_stats()
     new_row = uss.get_new_user_stats()
     if new_row: uss.update_user_stats(new_row, user_stats)
 
 def vss_do_all():
-    if ('video_stats' not in globals() and 'video_stats' not in locals()) or not isinstance(video_stats, pd.DataFrame):
+    if not df_in_memory('video_stats'):        
         video_stats = vss.load_video_stats()
     new_rows = vss.get_new_video_stats()
     if new_rows: vss.update_video_stats(new_rows, video_stats)
 
 def usp_do_all():
-    if ('user_stats' not in globals() and 'user_stats' not in locals()) or not isinstance(user_stats, pd.DataFrame):
+    if not df_in_memory('user_stats'):
         user_stats = uss.load_user_stats()
     usp.build_user_stats_plots(user_stats)
 
 def vsp_do_all():
-    if ('video_stats' not in globals() and 'video_stats' not in locals()) or not isinstance(video_stats, pd.DataFrame):
+    if not df_in_memory('video_stats'):        
         video_stats = vss.load_video_stats()
     vsp.build_video_stats_plots(video_stats)
 
+    if not df_in_memory('user_stats'):
+        user_stats = uss.load_user_stats()
+    vsp.build_total_views_plot(user_stats, video_stats)
+
 # create logs file and schedule and wait
 with open(LOGS_PATH, 'a') as f:
-    print(f"{dt.now().strftime('%m-%d-%Y %H:%M')}: starting", file=f)
+    print(f"{dt.now().strftime('%Y-%m-%d %H:%M')}: starting", file=f)
 
 # initiate first runs
 uss_do_all()
