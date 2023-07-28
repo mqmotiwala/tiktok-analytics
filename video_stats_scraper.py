@@ -24,7 +24,7 @@ LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
 VIDEO_STATS_COLS = ['timestamp', 'video_id', 'upload_date', 'views', 'likes', 'comments', 'shares', 'bookmarks', 'duration', 'link', 'title']
 
 def get_video_stats_file_path(username):
-    return f'{PATH_PREFIX}stats/{username}/video_stats.txt'
+    return f'{PATH_PREFIX}stats/{username}/video_stats_{username}.txt'
 
 def create_video_stats(file_path):
     # this will recursively make any folders it needs to for path

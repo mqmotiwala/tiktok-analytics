@@ -10,7 +10,7 @@ LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
 USER_STATS_COLS = ['timestamp', 'num_vids', 'num_likes', 'num_followers', 'num_following']
 
 def get_user_stats_file_path(username):
-    return f'{PATH_PREFIX}stats/{username}/user_stats.txt'
+    return f'{PATH_PREFIX}stats/{username}/user_stats_{username}.txt'
 
 def create_user_stats(file_path):
     # this will recursively make any folders it needs to for path

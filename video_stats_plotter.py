@@ -6,11 +6,19 @@ import platform
 import re
 import textwrap
 import pytz
+import os
+
+import user_stats_scraper as uss
+import video_stats_scraper as vss
 
 PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
 LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
-VIDEO_PLOTS_PATH = f'{PATH_PREFIX}plots/video_plots/'
-VIDEO_STATS_FILE_PATH = f'{PATH_PREFIX}stats/video_stats.txt'
+
+def get_video_plots_file_path(username):
+    return f'{PATH_PREFIX}plots/{username}/video_plots/'
+
+def get_video_stats_file_path(username):
+    return f'{PATH_PREFIX}stats/{username}/video_stats_{username}.txt'
 
 def cleaned_text(text):
     text = text[2:-1] # text is received as b'*', this removes the b'' parts
@@ -29,7 +37,15 @@ def adjust_title(fig, ax):
 
     fig.canvas.draw()
 
-def build_video_stats_plots(video_stats):
+def create_path_dirs(file_path):
+    # this will recursively make any folders it needs to for path to be valid
+    # this is needed to dynamically create a user's root folder
+    # this will do nothing if path already exists
+    os.makedirs(os.path.dirname(file_path), exist_ok=True) 
+
+def build_video_stats_plots(username):
+    video_stats = vss.load_video_stats(username)
+
     # ensure timestamp col vals are treated as datetime objects
     # convert to pst for plotting
     video_stats['timestamp'] = pd.to_datetime(video_stats['timestamp'], unit='s')
@@ -59,14 +75,19 @@ def build_video_stats_plots(video_stats):
 
         plt.legend()
 
-        PLOT_PATH=f"{VIDEO_PLOTS_PATH}Video #{video_num+1}"
+        VIDEO_PLOTS_FILE_PATH = get_video_plots_file_path(username)
+        create_path_dirs(VIDEO_PLOTS_FILE_PATH)
+        PLOT_PATH=f"{VIDEO_PLOTS_FILE_PATH}Video #{video_num+1}"
         plt.savefig(PLOT_PATH)
         plt.close(fig)
 
     with open(LOGS_PATH, 'a') as f:
-            print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: updated video plots", file=f)
+            print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: [{username}] updated video plots", file=f)
 
-def build_total_views_plot(user_stats, video_stats):
+def build_total_views_plot(username):
+    user_stats = uss.load_user_stats(username)
+    video_stats = vss.load_video_stats(username)
+
     # ensure timestamp col vals are treated as datetime objects
     user_stats['timestamp'] = pd.to_datetime(user_stats['timestamp'])
     video_stats['timestamp'] = pd.to_datetime(video_stats['timestamp'])
@@ -110,6 +131,8 @@ def build_total_views_plot(user_stats, video_stats):
     ax2.legend(lines + lines2, labels + labels2)
 
     plt.title(f"num_vids and total_views over time")
-    PLOT_PATH=f"{VIDEO_PLOTS_PATH}total_views.png"
+    VIDEO_PLOTS_FILE_PATH = get_video_plots_file_path(username)
+    create_path_dirs(VIDEO_PLOTS_FILE_PATH)
+    PLOT_PATH=f"{VIDEO_PLOTS_FILE_PATH}total_views.png"
     plt.savefig(PLOT_PATH)
     plt.close('all')

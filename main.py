@@ -28,18 +28,13 @@ def vss_do_all():
     if new_rows: vss.update_video_stats(new_rows, username)
 
 def usp_do_all():
-    if not df_in_memory('user_stats'):
-        user_stats = uss.load_user_stats()
-    usp.build_user_stats_plots(user_stats)
+    for username in USERNAMES:
+        usp.build_user_stats_plots(username)
 
 def vsp_do_all():
-    if not df_in_memory('video_stats'):        
-        video_stats = vss.load_video_stats()
-    vsp.build_video_stats_plots(video_stats)
-
-    if not df_in_memory('user_stats'):
-        user_stats = uss.load_user_stats()
-    vsp.build_total_views_plot(user_stats, video_stats)
+    for username in USERNAMES:
+        vsp.build_video_stats_plots(username)
+        vsp.build_total_views_plot(username)
 
 # create logs file and schedule and wait
 with open(LOGS_PATH, 'a') as f:
