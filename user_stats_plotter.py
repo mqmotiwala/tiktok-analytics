@@ -52,7 +52,7 @@ def build_user_stats_plots(username):
         ax1.xaxis.set_major_formatter(mdates.ConciseDateFormatter(ax1.xaxis.get_major_locator(), tz=pst))
         plt.gcf().autofmt_xdate(rotation=45)
 
-        plt.title(f"num_vids and {stat_name} over time")
+        plt.title(f"{username}: num_vids and {stat_name} over time")
         # Combine the legends from both axes into one
         lines, labels = ax1.get_legend_handles_labels()
         lines2, labels2 = ax2.get_legend_handles_labels()

@@ -36,21 +36,24 @@ def vsp_do_all():
         vsp.build_video_stats_plots(username)
         vsp.build_total_views_plot(username)
 
-# create logs file and schedule and wait
-with open(LOGS_PATH, 'a') as f:
-    print(f"{dt.now().strftime('%Y-%m-%d %H:%M')}: starting", file=f)
+if __name__ == "__main__":
+    print("ok i begin")
+    
+    # create logs file and schedule and wait
+    with open(LOGS_PATH, 'a') as f:
+        print(f"{dt.now().strftime('%Y-%m-%d %H:%M')}: starting", file=f)
 
-# initiate first runs
-uss_do_all()
-# usp_do_all()
-vss_do_all()
-# vsp_do_all()
+    # initiate first runs
+    uss_do_all()
+    usp_do_all()
+    vss_do_all()
+    vsp_do_all()
 
-# schedule future runs
-schedule.every(15).minutes.do(vss_do_all)
-# schedule.every(15).minutes.do(vsp_do_all)
-schedule.every(60).minutes.do(uss_do_all)
-# schedule.every(60).minutes.do(usp_do_all)
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+    # schedule future runs
+    schedule.every(15).minutes.do(vss_do_all)
+    schedule.every(15).minutes.do(vsp_do_all)
+    schedule.every(60).minutes.do(uss_do_all)
+    schedule.every(60).minutes.do(usp_do_all)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)

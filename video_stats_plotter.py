@@ -57,11 +57,12 @@ def build_video_stats_plots(username):
         specific_video_stats = video_stats[video_stats['video_id'] == video_id]
         time_data = specific_video_stats['timestamp']
         views_data = specific_video_stats['views']
+        engagement_data = specific_video_stats[['likes', 'comments', 'shares', 'bookmarks']].sum(axis=1)
         
         video_title = cleaned_text(specific_video_stats['title'].iloc[0])
         upload_date = specific_video_stats['upload_date'].iloc[0][:19]
 
-        title_text = f"vid #{video_num+1} (upl. {upload_date}) {video_title}"
+        title_text = f"{username} vid #{video_num+1} (upl. {upload_date}) {video_title}"
 
         fig, ax = plt.subplots()
         ax.xaxis.set_major_locator(mdates.AutoDateLocator())
@@ -130,7 +131,7 @@ def build_total_views_plot(username):
     lines2, labels2 = ax2.get_legend_handles_labels()
     ax2.legend(lines + lines2, labels + labels2)
 
-    plt.title(f"num_vids and total_views over time")
+    plt.title(f"{username}: num_vids and total_views over time")
     VIDEO_PLOTS_FILE_PATH = get_video_plots_file_path(username)
     create_path_dirs(VIDEO_PLOTS_FILE_PATH)
     PLOT_PATH=f"{VIDEO_PLOTS_FILE_PATH}total_views.png"
