@@ -1,30 +1,12 @@
 import pandas as pd
-from datetime import datetime as dt
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-import platform
 import pytz
-import os
 
-import user_stats_scraper as uss
-
-PATH_PREFIX = "/home/mqmotiwala/Desktop/tiktok-scraper/" if platform.system() == 'Linux' else ''
-LOGS_PATH = f'{PATH_PREFIX}logs/project_logs.log'
-
-def get_user_plots_file_path(username):
-    return f'{PATH_PREFIX}plots/{username}/user_plots/'
-
-def get_user_stats_file_path(username):
-    return f'{PATH_PREFIX}stats/{username}/user_stats_{username}.txt'
-
-def create_path_dirs(file_path):
-    # this will recursively make any folders it needs to for path to be valid
-    # this is needed to dynamically create a user's root folder
-    # this will do nothing if path already exists
-    os.makedirs(os.path.dirname(file_path), exist_ok=True) 
+from constants import write_log, load_stats_file, get_plots_file_path, create_path_dirs
 
 def build_user_stats_plots(username):
-    user_stats = uss.load_user_stats(username)
+    user_stats = load_stats_file(username, 'user')
 
     user_stats['timestamp'] = pd.to_datetime(user_stats['timestamp'], unit='s') # ensure timestamp col vals are treated as datetime objects
     pst = pytz.timezone('America/Los_Angeles')
@@ -58,11 +40,10 @@ def build_user_stats_plots(username):
         lines2, labels2 = ax2.get_legend_handles_labels()
         ax2.legend(lines + lines2, labels + labels2)
 
-        USER_STATS_PLOT_PATH = get_user_plots_file_path(username)
-        create_path_dirs(USER_STATS_PLOT_PATH)
-        PLOT_PATH=f"{USER_STATS_PLOT_PATH}{stat_name}.png"
+        plot_path = get_plots_file_path(username, 'user')
+        create_path_dirs(plot_path)
+        PLOT_PATH=f"{plot_path}{stat_name}.png"
         plt.savefig(PLOT_PATH)
         plt.close('all')
 
-    with open(LOGS_PATH, 'a') as f:
-            print(f"{dt.strftime(dt.now(), '%Y-%m-%d %H:%M')}: [{username}] updated user plots", file=f)
+    write_log(f"[{username}] updated user plots")
